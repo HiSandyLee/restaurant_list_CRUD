@@ -43,16 +43,6 @@ app.get('/', (req, res) => {
     .catch(error => console.log(error)) //若發生意外執行錯誤處理
 })
 
-//search bar
-// app.get('/search', (req, res) => {
-//   const keyword = req.query.keyword.trim()
-//   const restaurants = restaurantList.results.filter(restaurant => {
-//     return restaurant.name.toLowerCase().includes(keyword.toLowerCase()) || restaurant.category.toLowerCase().includes(keyword.toLowerCase())
-//   })
-
-//   res.render('index', { restaurants, keyword })
-// })
-
 app.get('/search', (req, res) => {
   const keyword = req.query.keyword.trim()
   return Restaurant.find()
