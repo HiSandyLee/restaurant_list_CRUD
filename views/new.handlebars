@@ -12,7 +12,7 @@
                 餐廳名稱
               </label>
               <div class="col-md-10">
-                <input type="text" placeholder="請輸入名稱" name="name" class="form-control">
+                <input type="text" placeholder="請輸入名稱" name="name" class="form-control" required>
               </div>
             </div>
 
@@ -21,7 +21,7 @@
                 餐廳英文
               </label>
               <div class="col-md-10">
-                <input type="text" placeholder="請輸入名稱" name="name_en" class="form-control">
+                <input type="text" placeholder="請輸入名稱" name="name_en" class="form-control" required>
               </div>
             </div>
             <div class="form-group form-row">
@@ -29,7 +29,7 @@
                 餐廳總類
               </label>
               <div class="col-md-10">
-                <input type="text" placeholder="請輸入種類" name="category" class="form-control">
+                <input type="text" placeholder="請輸入種類" name="category" class="form-control" required>
               </div>
             </div>
 
@@ -38,7 +38,7 @@
                 餐廳圖片
               </label>
               <div class="col-md-10">
-                <input type="text" placeholder="請新增圖片" name="image" class="form-control">
+                <input type="text" placeholder="請新增圖片" name="image" class="form-control" required>
               </div>
             </div>
 
@@ -47,7 +47,16 @@
                 餐廳位置
               </label>
               <div class="col-md-10">
-                <input type="text" placeholder="請輸入地址" name="location" class="form-control">
+                <input type="text" placeholder="請輸入地址" name="location" class="form-control" required>
+              </div>
+            </div>
+
+            <div class="form-group form-row">
+              <label for="phone" class="col-md-2 col-form-label">
+                餐廳電話
+              </label>
+              <div class="col-md-10">
+                <input type="text" placeholder="請輸入電話" name="phone" class="form-control" required>
               </div>
             </div>
 
@@ -56,7 +65,7 @@
                 餐廳評價
               </label>
               <div class="col-md-10">
-                <input type="text" placeholder="請輸入評價" name="rating" class="form-control">
+                <input type="text" placeholder="請輸入評價" name="rating" class="form-control" required>
               </div>
             </div>
 
@@ -65,7 +74,7 @@
                 餐廳描述
               </label>
               <div class="col-md-10">
-                <textarea class="form-control" placeholder="請新增描述" name="description"></textarea>
+                <textarea class="form-control" placeholder="請新增描述" name="description" required></textarea>
               </div>
             </div>
             <div class="d-flex justify-content-center mt-3">
@@ -74,7 +83,6 @@
 
           </form>
         </div>
-
       </div>
     </div>
   </div>

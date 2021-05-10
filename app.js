@@ -44,17 +44,14 @@ app.get('/', (req, res) => {
 })
 
 app.get('/search', (req, res) => {
-  const keyword = req.query.keyword.trim()
-  return Restaurant.find()
-    .lean()
-    .then(restaurants => {
-      const restaurantList = restaurants.filter((search) => {
-        return search.name.toLowerCase().includes(keyword) ||
-          search.category.toLowerCase().includes(keyword)
-      })
-      res.render('index', { restaurants: restaurantList, keyword })
-    })
-    .catch(error => { console.log(error) })
+  const { keyword } = req.query
+  const query = new RegExp(keyword.trim(), 'i')
+  // 關鍵字可搜尋'餐廳名字'、'餐廳英文名字'、'餐廳類別'
+  return Restaurant.find({
+    $or: [{ name: query }, { category: query }]
+  }).lean()
+    .then(restaurants => res.render('index', { restaurants: restaurants, keyword }))
+    .catch(err => console.log(err))
 })
 
 //new
@@ -74,17 +71,7 @@ app.post('/restaurants', (req, res) => {
     rating,
     description,
   } = req.body
-  return Restaurant.create({
-    name,
-    name_en,
-    category,
-    image,
-    location,
-    phone,
-    google_map,
-    rating,
-    description,
-  })
+  return Restaurant.create(req.body)
     .then(() => res.redirect('/'))
     .catch(error => console.log(error))
 
