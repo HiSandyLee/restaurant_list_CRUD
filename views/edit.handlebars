@@ -14,7 +14,7 @@
               </label>
               <div class="col-md-10">
                 <input type="text" placeholder="{{restaurant.name}}" name="name" value="{{restaurant.name}}"
-                  class="form-control" class="form-control">
+                  class="form-control" class="form-control" required>
               </div>
             </div>
 
@@ -24,7 +24,7 @@
               </label>
               <div class="col-md-10">
                 <input type="text" placeholder="{{restaurant.name_en}}" name="name_en" value="{{restaurant.name_en}}"
-                  class="form-control">
+                  class="form-control" required>
               </div>
             </div>
             <div class="form-group form-row">
@@ -33,7 +33,7 @@
               </label>
               <div class="col-md-10">
                 <input type="text" placeholder="{{restaurant.category}}" name="category" value="{{restaurant.category}}"
-                  class="form-control">
+                  class="form-control" required>
               </div>
             </div>
 
@@ -43,7 +43,7 @@
               </label>
               <div class="col-md-10">
                 <input type="url" placeholder="{{restaurant.image}}" name="image" value="{{restaurant.image}}"
-                  class="form-control">
+                  class="form-control" required>
               </div>
             </div>
 
@@ -53,7 +53,17 @@
               </label>
               <div class="col-md-10">
                 <input type="text" placeholder="{{restaurant.location}}" name="location" value="{{restaurant.location}}"
-                  class="form-control">
+                  class="form-control" required>
+              </div>
+            </div>
+
+            <div class="form-group form-row">
+              <label for="phone" class="col-md-2 col-form-label">
+                餐廳電話
+              </label>
+              <div class="col-md-10">
+                <input type="text" placeholder="{{restaurant.phone}}" name="phone" value="{{restaurant.phone}}"
+                  class="form-control" required>
               </div>
             </div>
 
@@ -63,7 +73,7 @@
               </label>
               <div class="col-md-10">
                 <input type="text" placeholder="{{restaurant.rating}}" name="rating" value="{{restaurant.rating}}"
-                  class="form-control">
+                  class="form-control" required>
               </div>
             </div>
 
@@ -73,7 +83,7 @@
               </label>
               <div class="col-md-10">
                 <textarea type="text" placeholder="{{restaurant.description}}" name="description"
-                  value="{{restaurant.description}}" class="form-control">
+                  value="{{restaurant.description}}" class="form-control" required>{{restaurant.description}}
                </textarea>
               </div>
             </div>
