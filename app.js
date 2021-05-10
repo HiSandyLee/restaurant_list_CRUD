@@ -46,7 +46,7 @@ app.get('/', (req, res) => {
 app.get('/search', (req, res) => {
   const { keyword } = req.query
   const query = new RegExp(keyword.trim(), 'i')
-  // 關鍵字可搜尋'餐廳名字'、'餐廳英文名字'、'餐廳類別'
+  // 關鍵字可搜尋'餐廳名字'、'餐廳類別'
   return Restaurant.find({
     $or: [{ name: query }, { category: query }]
   }).lean()
